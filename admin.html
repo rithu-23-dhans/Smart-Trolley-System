@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Trolley - Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🛒 Smart Trolley</h1>
+    <p>Scan smart. Shop easy.</p>
+  </header>
+
+  <main class="container">
+    <!-- Barcode Scanner -->
+    <section class="card">
+      <h2>📷 Scan Product</h2>
+      <p>Scan a product barcode using your camera.</p>
+
+      <div class="scanner-buttons">
+        <button id="startScan" type="button">
+          Open Camera Scanner
+        </button>
+
+        <button id="stopScan" type="button" hidden>
+          Stop Scanner
+        </button>
+      </div>
+
+      <div id="reader" hidden></div>
+
+      <p id="scanMessage" role="status" aria-live="polite">
+        Ready to scan a product.
+      </p>
+
+      <div class="manual-entry">
+        <h3>Enter Barcode Manually</h3>
+
+        <input
+          type="text"
+          id="barcodeInput"
+          placeholder="Enter barcode number"
+          autocomplete="off"
+          inputmode="numeric"
+        >
+
+        <button id="manualAdd" type="button">
+          Add to Cart
+        </button>
+      </div>
+    </section>
+    
+<button id="testBuzzer" type="button">Test Buzzer</button>
+<p id="buzzerStatus">Buzzer not tested yet</p>
+
+      <button id="testBuzzer" type="button">Test Buzzer</button>
+      <p id="buzzerStatus">Buzzer not tested yet</p>
+
+    <!-- Shopping Cart -->
+    <section class="card">
+      <div class="cart-heading">
+        <h2>🛍️ Your Shopping Cart</h2>
+        <span id="itemCount">0 items</span>
+      </div>
+
+      <div id="cartItems">
+        <div class="empty-cart">
+          <span>🛍️</span>
+          <p>Your cart is empty</p>
+          <small>Scan a product to get started.</small>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h3>Total Amount</h3>
+        <p id="cartTotal">₹0.00</p>
+      </div>
+
+      <button id="clearCart" type="button" class="clear-button">
+        Clear Cart
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Smart Trolley Project | Shop smarter, shop easier.</p>
+  </footer>
+
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <script type="module" src="admin-script.js"></script>
+</body>
+</html>

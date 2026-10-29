@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Trolley - User</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🛒 Smart Trolley</h1>
+    <p>Scan smart. Shop easy.</p>
+  </header>
+
+  <main class="container">
+    <!-- Register New Product -->
+    <section class="card register-product">
+      <h2>➕ Register New Product</h2>
+
+      <p>
+        If a scanned barcode is not registered, enter the product
+        details below and save it for future scans.
+      </p>
+
+      <form id="productForm">
+        <label for="newBarcode">Barcode Number</label>
+        <input
+          id="newBarcode"
+          type="text"
+          placeholder="Scan or enter barcode"
+          autocomplete="off"
+          inputmode="numeric"
+          required
+        >
+
+        <label for="newName">Product Name</label>
+        <input
+          id="newName"
+          type="text"
+          placeholder="Example: Surf Excel"
+          required
+        >
+
+        <label for="newPrice">Price (₹)</label>
+        <input
+          id="newPrice"
+          type="number"
+          min="0.01"
+          step="0.01"
+          placeholder="Example: 45"
+          required
+        >
+
+        <label for="newWeight">Weight (grams)</label>
+        <input
+          id="newWeight"
+          type="number"
+          min="1"
+          step="1"
+          placeholder="Example: 500"
+          required
+        >
+
+        <button id="saveProduct" type="submit">
+          Save Product
+        </button>
+      </form>
+
+      <p id="registerMessage" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Smart Trolley Project | Shop smarter, shop easier.</p>
+  </footer>
+
+  <script type="module" src="user-script.js"></script>
+</body>
+</html>

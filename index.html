@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Trolley</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🛒 Smart Trolley</h1>
+    <p>Scan smart. Shop easy.</p>
+  </header>
+
+  <main class="container">
+    <section class="card role-card">
+      <h2>Select Login</h2>
+      <p>Please choose User or Admin.</p>
+
+      <div class="role-buttons">
+        <button id="userButton" type="button">User</button>
+        <button id="adminButton" type="button">Admin</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Smart Trolley Project | Shop smarter, shop easier.</p>
+  </footer>
+
+  <script>
+    document.getElementById("userButton").addEventListener("click", function () {
+      window.location.href = "./user.html";
+    });
+
+    document.getElementById("adminButton").addEventListener("click", function () {
+      window.location.href = "./admin.html";
+    });
+  </script>
+</body>
+</html>
